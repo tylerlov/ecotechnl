@@ -1,0 +1,285 @@
+body {
+  background-color: rgb(8, 8, 8);
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: white; /* Set default text color to white */
+}
+
+
+.logo-container img {
+  height: 50px; /* Default height for logos */
+  margin-right: 10px;
+  margin-top: -10px; /* Move the logo up slightly */
+}
+
+.logo-container .powell-logo {
+  height: 30px; /* Make the Powell logo smaller */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+h1 {
+  font-size: 2.5em; /* Adjust size as needed */
+  margin-bottom: 0.25em; /* Reduce the bottom margin to bring the headline closer to the subheadline */
+  line-height: 1.1; /* Adjust line-height for tighter text */
+}
+
+h2 {
+  font-size: 2em; /* Ensure this is smaller than h1 */
+}
+
+/* New styles for HeroSection */
+.hero-section {
+  background-size: cover;
+  background-position: center; /* Ensure background image is centered */
+  filter: blur(15%);
+  height: 100vh; /* Adjust the height as needed */
+}
+
+.container {
+  position: relative;
+  height: 100%; /* Take full height of the section */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  color: white; /* Text color */
+  padding: 0 80px; /* Add horizontal padding */
+}
+/* NavBar styles */
+.navbar {
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  display: flex;
+  justify-content: center; /* Center children */
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9); /* Black with 70% opacity */
+  padding: 1.5em 4em; /* Adjusted padding */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.logo-container, .contact-button {
+  position: absolute;
+}
+
+.logo-container {
+  left: 10px; /* Adjust based on desired padding */
+}
+
+.contact-button {
+  right: 2em; /* Adjust based on desired padding */
+}
+
+.nav-links {
+  /* No flex properties; it just inherits the centering from .navbar */
+}
+
+.logo-container img {
+  height: 50px; /* Adjust as needed */
+  margin-top: -10px; /* Move the logo up slightly */
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center; /* Center the links horizontally */
+  align-items: center; /* Center the links vertically */
+  flex: 1; /* Allow the container to take up the available space */
+  gap: 20px;
+}
+
+.contact-button a, .nav-links a {
+  background-color: transparent;
+  color: #c0c0c0;
+  padding: 0;
+  text-decoration: none;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 0.8em; /* Adjust font size as needed */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide links on small screens */
+  }
+  /* Add styles for hamburger menu icon */
+}
+
+.about_section {
+  position: relative; /* Ensure the pseudo-element is positioned relative to this container */
+  overflow: hidden; /* Prevent any overflow from the pseudo-element */
+}
+
+.team-section {
+  padding-top: 1em; /* Adjust the value as needed */
+  padding-bottom: 6em; /* Adjust the value as needed */
+  /* Add your base styles for the team section */
+}
+
+.team-member {
+  cursor: pointer;
+  padding: 10px;
+  position: relative; /* Needed for absolute positioning of the divider */
+}
+
+.team-member:hover {
+  background-color: #595959; /* Optional: highlight on hover */
+}
+
+.divider {
+  border-top: 1px solid #ccc; /* Style for the divider line */
+  width: 90%; /* Adjust the width as needed */
+  position: absolute;
+  left: 5%; /* Center the divider by offsetting it from both sides */
+  bottom: 0; /* Position at the bottom of the team-member */
+}
+
+.team-member-image {
+  width: 100px; /* Adjust as needed */
+  height: 100px; /* Make height equal to width for a perfect circle */
+  border-radius: 50%; /* This creates the circular shape */
+  object-fit: cover; /* Ensures the image covers the space without distorting */
+  display: block; /* Ensure the image doesn't inline */
+  margin-top: 10px; /* Space between the title and the image */
+  margin-left: 60px; /* Adds some space between the text and the image */
+}
+
+.team-member-description {
+  flex: 1; /* Allows the description to fill the space */
+  margin-right: 20px; /* Adds some space between the text and the image */
+}
+
+.member-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically */
+    padding: 10px 8em 20px; /* Top, Right, Bottom, Left padding */
+}
+
+.member-details img {
+  width: 100px; /* Adjust as needed */
+  padding: 10px; /* Add padding around the image */
+  height: auto;
+}
+
+.team-member h4 {
+  color: rgb(198, 198, 198); /* Adjust the opacity as needed */
+}
+
+.mission_section {
+  position: relative; /* Ensure the pseudo-element is positioned relative to this container */
+  overflow: hidden; /* Prevent any overflow from the pseudo-element */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.mission_section .container {
+  max-width: 1200px; /* Adjust based on your design */
+  margin: auto; /* Center the container */
+  padding: 40px; /* Add padding around the edges */
+}
+
+.mission_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items at the start of the flex container */
+  gap: 20px; /* Space between image and statements */
+}
+
+.mission_image img {
+  width: 100%; /* Adjust the width as needed */
+  max-width: 600px; /* Prevent the image from being too large */
+  object-fit: cover; /* Ensure the image covers the area nicely */
+  border-radius: 10px; /* Optional: adds rounded corners to the image */
+}
+
+.mission_statements {
+  width: 80%; /* Adjust the width as needed */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between each mission statement */
+}
+
+.mission_statement {
+  background: rgba(28, 28, 28, 0.1); /* Optional: adds a slight background */
+  padding: 20px;
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+  .mission_content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mission_image img, .mission_statements {
+    width: 100%; /* Full width on smaller screens */
+  }
+}
+
+.mission_statement p {
+  font-size: 1.2em; /* Example: Adjusting the font size */
+  max-width: 1200px; /* Ensuring the text is not too wide for readability */
+  margin: auto; /* Centering the text block */
+}
+/* Footer styles */
+.footer {
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  display: flex;
+  justify-content: center; /* Center children */
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9); /* Black with 90% opacity, similar to navbar */
+  padding: 20px 80px; /* Adjusted padding */
+  /* Removed fixed positioning to allow the footer to be at the natural bottom of the page */
+}
+
+.footer .logo-container, .footer .footer-links {
+  position: static; /* Adjusted from absolute to static for natural flow within the footer */
+}
+
+.footer .logo-container {
+  /* Adjustments if needed based on new positioning */
+}
+
+.footer .footer-links {
+  /* Adjustments if needed based on new positioning */
+}
+
+.footer .footer-links a {
+  background-color: transparent;
+  color: #fff;
+  padding: 0;
+  text-decoration: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+/* Adjust the logo size in the footer if needed */
+.footer .logo-container img {
+  height: 50px; /* Adjust as needed */
+  margin-right: 10px;
+}
+
+.footer {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9); /* This will be mostly overridden by the background image */
+  padding: 20px 80px;
+  background-size: cover; /* Ensure the image covers the footer */
+  background-position: center; /* Center the background image */
+  color: #fff; /* Adjust text color for better visibility over the background image */
+}
