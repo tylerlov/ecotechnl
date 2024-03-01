@@ -83,8 +83,9 @@ h2 {
   right: 2em; /* Adjust based on desired padding */
 }
 
-.nav-links {
-  /* No flex properties; it just inherits the centering from .navbar */
+.nav-links a:hover, .contact-button a:hover {
+  color: #ffffff; /* This will change the text color to pure white on hover */
+  transition: color 0.3s ease-in-out; /* Optional: adds a smooth transition effect */
 }
 
 .logo-container img {
@@ -136,7 +137,7 @@ h2 {
 }
 
 .team-member:hover {
-  background-color: #595959; /* Optional: highlight on hover */
+  background-color: #222222; /* Optional: highlight on hover */
 }
 
 .divider {
@@ -148,9 +149,6 @@ h2 {
 }
 
 .team-member-description {
-  flex: 1; /* Allows the description to fill the space */
-  text-align: center; /* Center-align the text */
-  margin-right: 0; /* Remove any right margin that might misalign the text */
   padding: 0 20px; /* Add some padding on the sides if needed for better readability */
 }
 
@@ -164,7 +162,6 @@ h2 {
 .member-details img {
   width: 100px; /* Adjust width as needed */
   height: 100px; /* Make height equal to width for a perfect circle */
-  padding: 10px; /* Add padding around the image */
   border-radius: 50%; /* This makes the image circular */
   object-fit: cover; /* Ensures the image covers the area without distortion */
   margin-bottom: 20px; /* Add space between the image and the description */
