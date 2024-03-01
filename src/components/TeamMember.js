@@ -6,10 +6,14 @@ const TeamMember = ({ blok }) => {
 
   const toggleExpand = () => setIsExpanded(!isExpanded);
 
+  // Add a conditional class based on isExpanded state
+  const titleClass = isExpanded ? "title-expanded" : "title-collapsed";
+
   return (
     <div {...storyblokEditable(blok)} className="team-member" onClick={toggleExpand}>
       <h3>{blok.name}</h3>
-      <h4>{blok.title}</h4>
+      {/* Apply the conditional class to the h4 element */}
+      <h4 className={titleClass}>{blok.title}</h4>
       {isExpanded && (
         <div className="member-details">
             {blok.image && <img src={blok.image.filename} alt={blok.name} className="team-member-image" />}
