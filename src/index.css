@@ -95,7 +95,7 @@ h2 {
 
 .nav-links {
   display: flex;
-  justify-content: center; /* Center the links horizontally */
+  justify-content: flex-end; /* Align the links to the right */
   align-items: center; /* Center the links vertically */
   flex: 1; /* Allow the container to take up the available space */
   gap: 20px;
@@ -113,10 +113,55 @@ h2 {
 
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
+
+  .navbar {
+    padding: 2em 4em; /* Adjusted padding */
+
+  }
   .nav-links {
     display: none; /* Hide links on small screens */
   }
   /* Add styles for hamburger menu icon */
+  .burger-menu {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 20px; /* Adjust as needed */
+    top: 20px; /* Adjust as needed */
+
+  }
+  .burger-menu span {
+    display: block;
+    width: 25px; /* Adjust as needed */
+    height: 3px; /* Adjust as needed */
+    background-color: #333; /* Adjust color as needed */
+    margin: 5px 0; /* Adjust spacing as needed */
+    transition: 0.4s;
+  }
+  .nav-links.show {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Align items to the start */
+    background-color: rgba(14, 14, 14, 0.95); /* Adjust color as needed, with added transparency */
+    position: absolute;
+    width: 100%;
+    top: 100%; /* Position below the navbar */
+    left: 0;
+  }
+  .contact-button a, .nav-links a, .contact-link {
+    /* Existing styles */
+  }
+  .burger-menu.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .burger-menu.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .burger-menu.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
 }
 
 .about_section {
@@ -210,21 +255,26 @@ h2 {
 .mission_section .container {
   max-width: 1200px; /* Adjust based on your design */
   margin: auto; /* Center the container */
-  padding: 40px; /* Add padding around the edges */
+  padding: 20px; /* Add padding around the edges */
 }
 
 .mission_content {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Align items at the start of the flex container */
-  gap: 20px; /* Space between image and statements */
+  align-items: stretch; /* Updated to stretch to match the height of the container */
+  gap: 20px;
+}
+
+.mission_image {
+  max-width: 50%; /* Limit the image container to half of the parent's width */
 }
 
 .mission_image img {
-  width: 100%; /* Adjust the width as needed */
-  max-width: 600px; /* Prevent the image from being too large */
-  object-fit: cover; /* Ensure the image covers the area nicely */
-  border-radius: 10px; /* Optional: adds rounded corners to the image */
+  width: 100%;
+  height: 80%; 
+  object-fit: cover; /* or 'contain', depending on the desired effect */
+  max-width: 100%; /* Limit the image's maximum width to 80% of its container */
+  border-radius: 10px;
 }
 
 .mission_statements {
