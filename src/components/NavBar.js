@@ -20,9 +20,9 @@ const NavBar = ({ blok }) => {
       <div className={`nav-links ${navVisible ? 'show' : ''}`}>
         {/* Use react-scroll Link for smooth scrolling */}
         <Link to="about_section" smooth={true} duration={500}>About</Link>
-        <Link to="mission_section" smooth={true} duration={500}>Mission</Link>
+        <Link to="mission_section" smooth={true} duration={500} offset={-50}>Mission</Link>
         <Link to="products_and_services_section" smooth={true} duration={500}>Products and Services</Link>
-        <Link to="team_section" smooth={true} duration={500}>Team</Link>
+        <Link to="team_section" smooth={true} duration={500} offset={-50}>Team</Link>
         <a href="mailto:contact@example.com" className="contact-link">Contact</a>
       </div>
       {/* Burger menu icon */}

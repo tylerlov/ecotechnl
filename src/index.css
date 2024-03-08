@@ -1,74 +1,72 @@
 body {
-  background-color: rgb(8, 8, 8);
+  background-color: #080808;
   margin: 0;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: white; /* Set default text color to white */
+  color: #fff;
 }
 
-
 .logo-container img {
-  height: 50px; /* Default height for logos */
+  height: 50px;
   margin-right: 10px;
-  margin-top: -10px; /* Move the logo up slightly */
+  margin-top: -10px;
 }
 
 .logo-container .powell-logo {
-  height: 30px; /* Make the Powell logo smaller */
+  height: 30px;
 }
-
-
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
 h1, h2, h3, h5, h6 {
-  padding-bottom: 20px; /* Adjust the padding as needed */
+  padding-bottom: 20px;
 }
+
 h1 {
-  font-size: 2.5em; /* Adjust size as needed */
-  margin-bottom: 0.25em; /* Reduce the bottom margin to bring the headline closer to the subheadline */
-  line-height: 1.1; /* Adjust line-height for tighter text */
+  font-size: 24px;
+  margin-bottom: 0.5em;
 }
 
 h2 {
-  font-size: 2em; /* Ensure this is smaller than h1 */
+  font-size: 2em;
 }
 
-/* New styles for HeroSection */
 .hero-section {
   background-size: cover;
-  background-position: center; /* Ensure background image is centered */
+  background-position: center;
   filter: blur(15%);
-  height: 100vh; /* Adjust the height as needed */
+  height: 100vh;
 }
 
 .container {
   position: relative;
-  height: 100%; /* Take full height of the section */
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
-  color: white; /* Text color */
-  padding: 0 80px; /* Add horizontal padding */
-}
-/* NavBar styles */
-.navbar {
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  display: flex;
-  justify-content: center; /* Center children */
+  justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.9); /* Black with 70% opacity */
-  padding: 1.5em 4em; /* Adjusted padding */
+  color: #fff;
+  padding: 0 80px;
+}
+
+.navbar {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 1.5em 4em;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .logo-container, .contact-button {
@@ -76,28 +74,23 @@ h2 {
 }
 
 .logo-container {
-  left: 10px; /* Adjust based on desired padding */
+  left: 10px;
 }
 
 .contact-button {
-  right: 2em; /* Adjust based on desired padding */
+  right: 2em;
 }
 
 .nav-links a:hover, .contact-button a:hover {
-  color: #ffffff; /* This will change the text color to pure white on hover */
-  transition: color 0.3s ease-in-out; /* Optional: adds a smooth transition effect */
-}
-
-.logo-container img {
-  height: 50px; /* Adjust as needed */
-  margin-top: -10px; /* Move the logo up slightly */
+  color: #fff;
+  transition: color 0.3s ease-in-out;
 }
 
 .nav-links {
   display: flex;
-  justify-content: flex-end; /* Align the links to the right */
-  align-items: center; /* Center the links vertically */
-  flex: 1; /* Allow the container to take up the available space */
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
   gap: 20px;
 }
 
@@ -108,192 +101,197 @@ h2 {
   text-decoration: none;
   border-radius: 0;
   cursor: pointer;
-  font-size: 0.8em; /* Adjust font size as needed */
+  font-size: 0.8em;
 }
 
-/* Responsive design for smaller screens */
 @media (max-width: 768px) {
-
   .navbar {
-    padding: 2em 4em; /* Adjusted padding */
+    padding: 2em 4em;
+  }
 
-  }
   .nav-links {
-    display: none; /* Hide links on small screens */
+    display: none;
   }
-  /* Add styles for hamburger menu icon */
+
   .burger-menu {
     display: block;
     cursor: pointer;
     position: absolute;
-    right: 20px; /* Adjust as needed */
-    top: 20px; /* Adjust as needed */
-
+    right: 20px;
+    top: 20px;
   }
+
   .burger-menu span {
     display: block;
-    width: 25px; /* Adjust as needed */
-    height: 3px; /* Adjust as needed */
-    background-color: #333; /* Adjust color as needed */
-    margin: 5px 0; /* Adjust spacing as needed */
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
     transition: 0.4s;
   }
+
   .nav-links.show {
     padding-top: 20px;
     padding-bottom: 20px;
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Align items to the start */
-    background-color: rgba(14, 14, 14, 0.95); /* Adjust color as needed, with added transparency */
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(14, 14, 14, 0.95);
     position: absolute;
     width: 100%;
-    top: 100%; /* Position below the navbar */
+    top: 100%;
     left: 0;
   }
-  .contact-button a, .nav-links a, .contact-link {
-    /* Existing styles */
-  }
+
   .burger-menu.open span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
+
   .burger-menu.open span:nth-child(2) {
     opacity: 0;
   }
+
   .burger-menu.open span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -6px);
   }
 }
 
-.about_section {
-  position: relative; /* Ensure the pseudo-element is positioned relative to this container */
-  overflow: hidden; /* Prevent any overflow from the pseudo-element */
+.about_section, .products_and_services_section, .mission_section {
+  height: auto;
+  padding: 20px 0;
+}
+
+.about_section .container, .products_and_services_section .container, .mission_section .container {
+  padding: 0 10px;
+}
+
+.about_section h1, .products_and_services_section h1, .mission_section h1,
+.about_section p, .products_and_services_section p, .mission_section p, .mission_statement p {
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .about_section h1, .products_and_services_section h1, .mission_section h1 {
+    font-size: 20px;
+  }
+
+  .about_section p, .products_and_services_section p, .mission_section p, .mission_statement p {
+    font-size: 16px;
+  }
 }
 
 .team-section {
-  padding-top: 1em; /* Adjust the value as needed */
-  padding-bottom: 6em; /* Adjust the value as needed */
-  /* Add your base styles for the team section */
+  padding-top: 1em;
+  padding-bottom: 6em;
 }
 
 .team-member {
   cursor: pointer;
   padding: 10px;
-  position: relative; /* Needed for absolute positioning of the divider */
+  position: relative;
 }
 
 .team-member:hover {
-  background-color: #222222; /* Optional: highlight on hover */
+  background-color: #222;
 }
 
 .divider {
-  border-top: 1px solid #ccc; /* Style for the divider line */
-  width: 90%; /* Adjust the width as needed */
+  border-top: 1px solid #ccc;
+  width: 90%;
   position: absolute;
-  left: 5%; /* Center the divider by offsetting it from both sides */
-  bottom: 0; /* Position at the bottom of the team-member */
+  left: 5%;
+  bottom: 0;
 }
 
 .team-member-description {
-  padding: 0 20px; /* Add some padding on the sides if needed for better readability */
+  padding: 0 20px;
 }
 
 .member-details {
-    display: flex;
-    flex-direction: column; /* Change to column to stack items vertically */
-    align-items: center; /* Keep items centered */
-    padding: 10px 8em 20px; /* Adjust padding as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 8em 20px;
 }
 
 .member-details img {
-  width: 100px; /* Adjust width as needed */
-  height: 100px; /* Make height equal to width for a perfect circle */
-  border-radius: 50%; /* This makes the image circular */
-  object-fit: cover; /* Ensures the image covers the area without distortion */
-  margin-bottom: 20px; /* Add space between the image and the description */
-  position: relative; /* Needed if you're using a pseudo-element for overlay */
-  overflow: hidden; /* Ensures no overflow outside the circular boundary */
-}
-
-/* If an overlay effect is desired, you might need something like this */
-.member-details img::after {
-  content: ""; /* Required for pseudo-elements */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Example overlay: black with 50% opacity */
-  border-radius: 50%; /* Ensure the overlay is also circular */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
 }
 
 .team-member h3,
 .team-member h4 {
-  padding-bottom: 0; /* Remove bottom padding */
-  margin-bottom: 0; /* You might also want to ensure there's no bottom margin */
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .team-member h4 {
-  color: rgb(198, 198, 198); /* Adjust the opacity as needed */
-  padding-bottom: 20px; /* Add bottom padding for the title when not expanded */
+  color: #c6c6c6;
+  padding-bottom: 20px;
 }
 
 .title-expanded {
-  padding-bottom: 0; /* Remove bottom padding for the title when expanded */
+  padding-bottom: 0;
 }
 
 .mission_section {
-  position: relative; /* Ensure the pseudo-element is positioned relative to this container */
-  overflow: hidden; /* Prevent any overflow from the pseudo-element */
+  position: relative;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   background-size: cover;
   background-position: center;
+  padding: 20px 0;
 }
 
 .mission_section .container {
-  max-width: 1200px; /* Adjust based on your design */
-  margin: auto; /* Center the container */
-  padding: 20px; /* Add padding around the edges */
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 10px;
 }
 
 .mission_content {
   display: flex;
   justify-content: space-between;
-  align-items: stretch; /* Updated to stretch to match the height of the container */
+  align-items: stretch;
   gap: 20px;
 }
 
 .mission_image {
-  max-width: 50%; /* Limit the image container to half of the parent's width */
+  max-width: 50%;
 }
 
 .mission_image img {
   width: 100%;
-  height: 80%; 
-  object-fit: cover; /* or 'contain', depending on the desired effect */
-  max-width: 100%; /* Limit the image's maximum width to 80% of its container */
+  height: 80%;
+  object-fit: cover;
+  max-width: 100%;
   border-radius: 10px;
 }
 
 .mission_statements {
-  width: 80%; /* Adjust the width as needed */
+  width: 80%;
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Space between each mission statement */
+  gap: 20px;
 }
 
 .mission_statement {
-  background: rgba(28, 28, 28, 0.1); /* Optional: adds a slight background */
+  background: rgba(28, 28, 28, 0.1);
   padding: 20px;
 }
 
 .mission_section h1 {
-  padding-bottom: 40px; /* Ensures consistency with other headlines */
+  padding-bottom: 40px;
 }
 
-/* Ensure responsiveness */
 @media (max-width: 768px) {
   .mission_content {
     flex-direction: column;
@@ -301,57 +299,20 @@ h2 {
   }
 
   .mission_image img, .mission_statements {
-    width: 100%; /* Full width on smaller screens */
+    width: 100%;
   }
 }
 
 .mission_statement p {
-  font-size: 1.2em; /* Example: Adjusting the font size */
-  max-width: 60ch; /* Ensuring the text is not too wide for readability */
-  margin: auto; /* Centering the text block */
+  font-size: 1.2em;
+  max-width: 60ch;
+  margin: auto;
 }
 
 p {
-  max-width: 60ch; /* or 800px */
+  max-width: 60ch;
   margin-left: auto;
   margin-right: auto;
-}
-/* Footer styles */
-.footer {
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  display: flex;
-  justify-content: center; /* Center children */
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.9); /* Black with 90% opacity, similar to navbar */
-  padding: 20px 80px; /* Adjusted padding */
-  /* Removed fixed positioning to allow the footer to be at the natural bottom of the page */
-}
-
-.footer .logo-container, .footer .footer-links {
-  position: static; /* Adjusted from absolute to static for natural flow within the footer */
-}
-
-.footer .logo-container {
-  /* Adjustments if needed based on new positioning */
-}
-
-.footer .footer-links {
-  /* Adjustments if needed based on new positioning */
-}
-
-.footer .footer-links a {
-  background-color: transparent;
-  color: #fff;
-  padding: 0;
-  text-decoration: none;
-  border-radius: 0;
-  cursor: pointer;
-}
-
-/* Adjust the logo size in the footer if needed */
-.footer .logo-container img {
-  height: 50px; /* Adjust as needed */
-  margin-right: 10px;
 }
 
 .footer {
@@ -359,9 +320,79 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.9); /* This will be mostly overridden by the background image */
+  background-color: rgba(0, 0, 0, 0.9);
   padding: 20px 80px;
-  background-size: cover; /* Ensure the image covers the footer */
-  background-position: center; /* Center the background image */
-  color: #fff; /* Adjust text color for better visibility over the background image */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.footer .contact-link {
+  color: #fff;
+  font-size: 1em;
+  background-color: transparent;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.footer .contact-link:hover {
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 2em 2em;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  .burger-menu span {
+    width: 20px;
+    height: 2px;
+    background-color: #333;
+    margin: 4px 0;
+  }
+
+  .logo-container {
+    left: 5px;
+  }
+
+  .logo-container img, .logo-container .powell-logo {
+    height: 40px;
+    margin-top: -5px;
+  }
+
+  .contact-button a, .nav-links a {
+    font-size: 0.7em;
+  }
+}
+.read-more-link {
+  color: #fff; /* Assuming white text color as in the NavBar links */
+  font-size: 0.8em; /* Match the font size of NavBar links */
+  background-color: transparent;
+  padding: 10px 20px; /* Adjust padding as needed */
+  border: 2px solid #fff; /* Assuming a white border as in the contact link */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+.read-more-link:hover {
+  background-color: #fff; /* Background color change on hover */
+  color: #000; /* Text color change on hover */
 }

@@ -19,7 +19,7 @@ const Footer = ({ blok, background_image }) => {
       return (
         <section {...storyblokEditable(blok)} className="footer" style={dynamicStyle}>
           <div className="container">
-            <h1>{blok.contact_email}</h1>
+            <a href={`mailto:${blok.contact_email}`} className="contact-link">Contact Us</a>
           </div>
         </section>
       );
