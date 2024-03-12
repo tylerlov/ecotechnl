@@ -18,7 +18,7 @@ import TeamSection from "./components/TeamSection";
 import TeamMember from "./components/TeamMember";
 import MissionStatement from "./components/MissionStatement";
 import Footer from "./components/Footer";
-
+import ProductService from "./components/ProductService"; // Added line for new component
 
 storyblokInit({
   accessToken: "fES89FuaVkjCLgkatFgurwtt",
@@ -36,7 +36,8 @@ storyblokInit({
     mission_statement: MissionStatement,
     team_section: TeamSection,
     team_member: TeamMember,
-    footer: Footer
+    footer: Footer,
+    product_service: ProductService, // Added line for new component
   },
   apiOptions: {
     // for spaces located in the US or China:

@@ -396,3 +396,42 @@ p {
   background-color: #fff; /* Background color change on hover */
   color: #000; /* Text color change on hover */
 }
+
+.product-service {
+  /* Styles for the product/service component */
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-left: auto; /* Center the component horizontally */
+  margin-right: auto; /* Center the component horizontally */
+  width: 90%; /* Adjust the width to make the component smaller on the sides */
+  border-radius: 10px;
+  background-color: #080808; /* Off-blackish background similar to the body */
+  color: #fff; /* White text */
+  border: none; /* Remove the border */
+}
+
+.image-gallery {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+.image-gallery img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.asset-gallery img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.asset-gallery video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Add more selectors for other asset types as needed */
