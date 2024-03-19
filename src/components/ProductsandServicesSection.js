@@ -24,8 +24,8 @@ const ProductsandServicesSection = ({ blok }) => {
       <div className="container">
         <h1>{blok.headline}</h1>
         <p>{blok.text_content}</p>
-        <a href={blok.read_more.url} target="_blank" rel="noopener noreferrer" className="read-more-link">
-              {blok.read_more.text || 'Read More'}
+          <a href={blok.read_more.url} target="_blank" rel="noopener noreferrer" className="read-more-link">
+            {blok.read_more.text || 'Read More'}
           </a>
       </div>
     </section>
