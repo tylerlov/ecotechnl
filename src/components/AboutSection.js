@@ -1,5 +1,6 @@
 import React from 'react';
 import { storyblokEditable, useStoryblokState } from '@storyblok/react';
+import { render } from 'storyblok-rich-text-react-renderer'; // Import the render function
 
 const AboutSection = ({ blok }) => {
   blok = useStoryblokState(blok);
@@ -23,7 +24,7 @@ const AboutSection = ({ blok }) => {
     <section {...storyblokEditable(blok)} className="about_section" style={dynamicStyle}>
       <div className="container">
         <h1>{blok.headline}</h1>
-        <p>{blok.text_content}</p>
+        {render(blok.text_content)}
       </div>
     </section>
   );

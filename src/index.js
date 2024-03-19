@@ -19,6 +19,8 @@ import TeamMember from "./components/TeamMember";
 import MissionStatement from "./components/MissionStatement";
 import Footer from "./components/Footer";
 import TitleAndDescription from "./components/TitleAndDescription";
+import ProductService from "./components/ProductService";
+import ProductsAndServicesNavBar from "./components/ProductsAndServicesNavBar";
 
 
 storyblokInit({
@@ -39,6 +41,8 @@ storyblokInit({
     team_member: TeamMember,
     footer: Footer,
     title_and_description: TitleAndDescription,
+    product_service: ProductService,
+    products_and_services_navbar: ProductsAndServicesNavBar,
 
   },
   apiOptions: {

@@ -9,7 +9,7 @@ body {
 }
 
 .logo-container img {
-  height: 50px;
+  height: 55px;
   margin-right: 10px;
   margin-top: -10px;
 }
@@ -27,12 +27,12 @@ h1, h2, h3, h5, h6 {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 32px; /* Was 24px */
   margin-bottom: 0.5em;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 2.2em; /* Was 2em */
 }
 
 .hero-section {
@@ -165,7 +165,6 @@ h2 {
   padding: 0 10px;
 }
 
-.about_section h1, .products_and_services_section h1, .mission_section h1,
 .about_section p, .products_and_services_section p, .mission_section p, .mission_statement p {
   font-size: 18px;
 }
@@ -228,6 +227,7 @@ h2 {
 .team-member h4 {
   padding-bottom: 0;
   margin-bottom: 0;
+  font-size: 1.2em; /* Adjust as needed */
 }
 
 .team-member h4 {
@@ -434,4 +434,43 @@ p {
   height: auto;
 }
 
-/* Add more selectors for other asset types as needed */
+.products-services-navbar {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 1.5em 4em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.products-services-navbar .logo-container img {
+  height: 55px; /* Adjust if necessary */
+  margin-right: 20px; /* Ensures spacing between logo and contact link */
+}
+
+.contact-link-ps {
+  color: #fff;
+  font-size: 1em;
+  background-color: transparent;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-link-ps:hover {
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+}
+
+.products-and-services-page {
+  padding-top: 100px; /* Adjust the value as needed */
+}
