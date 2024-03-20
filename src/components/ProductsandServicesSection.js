@@ -31,7 +31,7 @@ const ProductsandServicesSection = ({ blok }) => {
         <h1>{blok.headline}</h1>
         <div>{render(blok.text_content)}</div>
         {readMoreUrl && (
-          <a href={readMoreUrl} target="_blank" rel="noopener noreferrer" className="read-more-link">
+          <a href={readMoreUrl} rel="noopener noreferrer" className="read-more-link">
             {blok.read_more.text || 'Read More'}
           </a>
         )}
